@@ -16,22 +16,18 @@
 package com.test;
 
 /**
- * This app servers as the entry point into the application
- * Collaborators:
- * 	{@code Frederick Wordie}
- *  {@code Felix Korsah}
- *  {@code Nana Kwame}
- *  
- *  Other collaborators are invited to join by forking the repository
- *  and making {@code pull request}
- *  
+ * This app servers as the entry point into the application Collaborators:
+ * {@code Frederick Wordie} {@code Felix Korsah} {@code Nana Kwame}
+ *
+ * Other collaborators are invited to join by forking the repository and making
+ * {@code pull request}
+ *
  * @author Julius Krah
  *
  */
 public class App {
-	public static void main(String.. args) {
-		
-	}
-	
-}
+	public static void main(final String... args) {
 
+	}
+
+}
