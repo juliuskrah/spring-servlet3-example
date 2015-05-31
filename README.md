@@ -11,7 +11,7 @@ use git add to stage changes:
   git add <file>
   
 use git commit to commit your changes and add comments:
-  git commit -m '<comment'
+  git commit -m '<comment>'
   
 use git push to update the repository:
   git push origin master
