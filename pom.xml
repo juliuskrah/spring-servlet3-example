@@ -13,12 +13,14 @@
 	<description>A test project to illustrate team collaboration</description>
 
 	<dependencies>
+		<!-- test -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit-version}</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- /test -->
 
 		<!-- Logging -->
 		<dependency>
@@ -37,6 +39,20 @@
 			<version>${slf4j-version}</version>
 		</dependency>
 		<!-- /Logging -->
+
+		<!-- spring -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring.security-version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.framework-version}</version>
+		</dependency>
+		<!-- /spring -->
 	</dependencies>
 
 	<!-- Build Settings -->
@@ -52,25 +68,8 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>${apache.maven.plugins.jar-version}</version>
-				<!-- <extensions>false</extensions> -->
-				<!-- <executions> <execution> <id>pre-process-classes</id> <phase>compile</phase> 
-					<goals> <goal>jar</goal> </goals> <configuration> <classifier>pre-process</classifier> 
-					</configuration> </execution> </executions> -->
-				<configuration>
-					<archive>
-						<index>true</index>
-						<manifest>
-							<addClasspath>true</addClasspath>
-						</manifest>
-						<manifestEntries>
-							<mode>development</mode>
-							<key>value</key>
-						</manifestEntries>
-					</archive>
-					<!-- <classifier>test</classifier> -->
-				</configuration>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${apache.maven.plugins.war-version}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -104,20 +103,6 @@
 						<goals>
 							<goal>check</goal>
 						</goals>
-						<configuration>
-							<rules>
-								<rule implementation="org.jacoco.maven.RuleConfiguration">
-									<element>BUNDLE</element>
-									<limits>
-										<limit implementation="org.jacoco.report.check.Limit">
-											<counter>COMPLEXITY</counter>
-											<value>COVEREDRATIO</value>
-											<minimum>0.60</minimum>
-										</limit>
-									</limits>
-								</rule>
-							</rules>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
@@ -191,12 +176,15 @@
 	</developers>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jacoco.maven.plugin-version>0.7.4.201502262128</jacoco.maven.plugin-version>
 		<maven.surefire.plugin-version>2.18.1</maven.surefire.plugin-version>
 		<maven.jxr.plugin-version>2.5</maven.jxr.plugin-version>
 		<maven-project-info-reports-plugin-version>2.8</maven-project-info-reports-plugin-version>
 		<apache.maven.plugins-version>3.3</apache.maven.plugins-version>
-		<apache.maven.plugins.jar-version>2.6</apache.maven.plugins.jar-version>
+		<apache.maven.plugins.war-version>2.6</apache.maven.plugins.war-version>
+		<spring.security-version>4.0.2.RELEASE</spring.security-version>
+		<spring.framework-version>4.1.6.RELEASE</spring.framework-version>
 		<log4j-version>1.2.17</log4j-version>
 		<slf4j-version>1.7.12</slf4j-version>
 		<junit-version>4.12</junit-version>
