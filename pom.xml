@@ -6,7 +6,7 @@
 
 	<groupId>com.stl.trainess</groupId>
 	<artifactId>project-spartan</artifactId>
-	<version>1.0.RELEASE</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>project-spartan</name>
 	<inceptionYear>2015</inceptionYear>
@@ -27,18 +27,30 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>${log4j-version}</version>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>${slf4j-version}</version>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>${slf4j-version}</version>
+			<scope>runtime</scope>
 		</dependency>
 		<!-- /Logging -->
+
+		<!-- servlet 3.1 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet-version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- /servlet 3.1 -->
 
 		<!-- spring -->
 		<dependency>
@@ -52,7 +64,20 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.framework-version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${spring.data-version}</version>
+		</dependency>
 		<!-- /spring -->
+
+		<!-- thymeleaf -->
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf-spring4</artifactId>
+			<version>${thymeleaf-version}</version>
+		</dependency>
+		<!-- /thymeleaf -->
 	</dependencies>
 
 	<!-- Build Settings -->
@@ -185,10 +210,13 @@
 		<apache.maven.plugins.war-version>2.6</apache.maven.plugins.war-version>
 		<spring.security-version>4.0.2.RELEASE</spring.security-version>
 		<spring.framework-version>4.1.6.RELEASE</spring.framework-version>
+		<spring.data-version>1.8.2.RELEASE</spring.data-version>
+		<thymeleaf-version>2.1.4.RELEASE</thymeleaf-version>
+		<servlet-version>3.1.0</servlet-version>
 		<log4j-version>1.2.17</log4j-version>
 		<slf4j-version>1.7.12</slf4j-version>
 		<junit-version>4.12</junit-version>
-		<java-version>1.7</java-version>
+		<java-version>1.8</java-version>
 	</properties>
 
 </project>
