@@ -71,6 +71,14 @@
 		</dependency>
 		<!-- /spring -->
 
+		<!-- hsqldb -->
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>${hsqldb-version}</version>
+		</dependency>
+		<!-- /hsqldb -->
+
 		<!-- thymeleaf -->
 		<dependency>
 			<groupId>org.thymeleaf</groupId>
@@ -86,6 +94,17 @@
 		<!-- <directory>${basedir}/target</directory> -->
 		<!-- <finalName>${artifactId}-${version}</finalName> -->
 		<plugins>
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>${jetty.maven.plugin-version}</version>
+				<configuration>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<webApp>
+						<contextPath>/spartan</contextPath>
+					</webApp>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -180,8 +199,8 @@
 	</licenses>
 
 	<organization>
-		<name>STL Application Team</name>
-		<!-- <url>http://mojo.codehaus.org</url> -->
+		<name>STL Development Team</name>
+		<url>http://supertechghana.com</url>
 	</organization>
 
 	<developers>
@@ -208,11 +227,13 @@
 		<maven-project-info-reports-plugin-version>2.8</maven-project-info-reports-plugin-version>
 		<apache.maven.plugins-version>3.3</apache.maven.plugins-version>
 		<apache.maven.plugins.war-version>2.6</apache.maven.plugins.war-version>
+		<jetty.maven.plugin-version>9.3.2.v20150730</jetty.maven.plugin-version>
 		<spring.security-version>4.0.2.RELEASE</spring.security-version>
 		<spring.framework-version>4.1.6.RELEASE</spring.framework-version>
 		<spring.data-version>1.8.2.RELEASE</spring.data-version>
 		<thymeleaf-version>2.1.4.RELEASE</thymeleaf-version>
 		<servlet-version>3.1.0</servlet-version>
+		<hsqldb-version>2.3.3</hsqldb-version>
 		<log4j-version>1.2.17</log4j-version>
 		<slf4j-version>1.7.12</slf4j-version>
 		<junit-version>4.12</junit-version>
