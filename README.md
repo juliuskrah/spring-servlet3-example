@@ -1,4 +1,4 @@
-# project-spartan
+# Project Spartan
 a test project by team spartan
 
 Use git clone:
