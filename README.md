@@ -21,7 +21,7 @@ use git fetch/merge to get uodates from repo:
   git merge origin/master
   
   
-Application Features
+###Application Features
 1. Runs on the [Jetty Server](http://www.eclipse.org/jetty/)
 
 2. Uses [Wro4J](http://wro4j.github.io/wro4j/) to bundle static resources
