@@ -17,7 +17,7 @@ a test project by team spartan
   `git push origin master`
   
 - use `git fetch/merge` to get updates from repo:
-  `git fetch`
+  `git fetch` and
   `git merge origin/master`
   
   
