@@ -1,4 +1,4 @@
-# Servlet 3 example
+# Servlet 3 Example
 Sample application that uses servlet 3.1 spec to run spring project
   
 ### Application Features
