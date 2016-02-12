@@ -1,4 +1,4 @@
-# Project Spartan
+# Servlet 3 example
 Sample application that uses servlet 3.1 spec to run spring project
   
 ### Application Features
@@ -6,7 +6,7 @@ Sample application that uses servlet 3.1 spec to run spring project
 2. [Spring Framework](http://projects.spring.io/spring-framework/) application
 
 ### Pre-requisites
-- Maven 3.3.3+
+- [Maven 3.3.3](http://maven.apache.org/)+
 - Java 8+
 - Tomcat 7+ optional
 
